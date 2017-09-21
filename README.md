@@ -1,4 +1,4 @@
-# MNIST Handwritten Number Classifying Neural Network
+# Handwritten Number Classifying Neural Network
 
 With this project, I aimed at analyzing a neural network from the ground up that could classify handwritten numbers. The MNIST data set is a common starting place for many machine learning approaches and its large data set proved ideal for building my network. The program is written in Python 2.7 and the MNIST data can be found here: http://yann.lecun.com/exdb/mnist/ 
 
@@ -6,7 +6,7 @@ With this project, I aimed at analyzing a neural network from the ground up that
 
 Before looking at the code, it is important to understand what a neural network is and how it functions. A neural network is an “information processing paradigm” that uses a system of neurons, configured in layers, to make decisions. This network is dependent on two important players: the weights and biases that guide the decision making of each neuron. Using these weights and biases, neurons are able to take binary input, pass judgement according to those parameters, and create an output. Next, a learning algorithm tunes the weights and biases of each neuron so the network as a whole can properly evaluate inputs to achieve the correct output.
 
-### The Sigmoid Neuron
+## The Sigmoid Neuron
 
 ![alt text](http://neuralnetworksanddeeplearning.com/images/tikz9.png)
 
