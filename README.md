@@ -44,8 +44,21 @@ This method is adapted to assist in computing time by only applying gradient des
 
 ## The Code
 
-The entire project is contained in two python files. The mnist_loader is a library used to parse the training and test date from the data folder. The network file contains a network object that will represent the entire neural network.
-
+The entire project is contained in two python files. The mnist_loader is a library used to parse the training and test date from the data folder. The network file contains a network object that will represent the entire neural network. In order to run the network first load the training, validation and test data from mnist_loader. In a python shell:
+```
+import mnist_loader
+training_data, validation_data, test_data = \
+... mnist_loader.load_data_wrapper()
+```
+Next initialize an instance of the network. The network takes 3 paramaters for 3 layers of the nerual network. The first layer is 784 neurons, the hidden layer is a variable amount, in this example 40 neurons, and the output layer has 10 neurons.
+```
+import network
+net = network.Network([784, 40, 10])
+```
+Now to start the learning process use the stochastic gradient descent method from the network instance. Note important parameters like the number of epochs or cycles, the mini-batch size, and the learning rate.
+```
+net.SGD(training_data, 30, 10, 3.0, test_data=test_data)
+```
 ## Authors
 
 **Benjamin Hughes** 
